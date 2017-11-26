@@ -1,0 +1,24 @@
+@font-face {
+  font-family: 'UA-brand';
+  src: url('../font/UA-brand.eot?#iefix') format('embedded-opentype'),  url('../font/UA-brand.otf')  format('opentype'),
+	     url('../font/UA-brand.woff') format('woff'), url('../font/UA-brand.ttf')  format('truetype'), url('../font/UA-brand.svg#UA-brand') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'UA-brand-Bold';
+  src: url('../font/UA-brand-Bold.eot?#iefix') format('embedded-opentype'),  url('../font/UA-brand-Bold.otf')  format('opentype'),
+	     url('../font/UA-brand-Bold.woff') format('woff'), url('../font/UA-brand-Bold.ttf')  format('truetype'), url('../font/UA-brand-Bold.svg#UA-brand-Bold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'UA-brand-Black';
+  src: url('../font/UA-brand-Black.eot?#iefix') format('embedded-opentype'),  url('../font/UA-brand-Black.otf')  format('opentype'),
+	     url('../font/UA-brand-Black.woff') format('woff'), url('../font/UA-brand-Black.ttf')  format('truetype'), url('../font/UA-brand-Black.svg#UA-brand-Black') format('svg');
+  font-weight: black;
+  font-style: normal;
+}
+

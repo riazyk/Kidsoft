@@ -1,0 +1,842 @@
+@import url(normalize.css);
+@import url(font.css);
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700&subset=cyrillic');
+
+
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+.mainWrapper {
+	width: 1920px;
+	background-color: #074261;
+	height: 804px;
+	font-family: 'UA-brand', sans-serif;
+}
+
+header {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: center;
+}
+
+.headerWrap {
+	padding-top: 50px;
+	min-width: 1170px;
+}
+
+h1 {
+	font-family: 'UA-brand', sans-serif;
+	font-size: 25px;
+	color: #fff;
+	margin-top: 0;
+	margin-bottom: 26px;
+	float: left;
+}
+
+form {
+	clear: both;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+}
+
+input[type="text"] {
+	width: 574px;
+	height: 46px;
+	color: #808080;
+	font-weight: 300;
+	font-family: 'Roboto';
+	margin-right: 10px;
+	padding-left: 12px;
+}
+
+input[type="date"] {
+	width: 120px;
+	height: 46px;
+	margin-right: 10px;
+	color: #fff;
+}
+
+select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	width: 187px;
+	height: 46px;
+	margin-right: 10px;
+	font-family: 'Roboto';
+	font-size: 16px;
+	/*font-weight: bold;*/
+	padding-left: 30px;
+}
+
+.selectWrapper {
+	position: relative;
+}
+
+.zmdi {
+	position: absolute;
+	color: #b3b3b3;
+	top:14px;
+	left:14px;
+}
+
+
+input[type="submit"] {
+	width: 260px;
+	height: 46px;
+	border: none;
+	background-color: #3d5ed8;
+	color: #fff;
+	font-weight: bold;
+	font-family: 'Roboto';
+
+}
+
+.toAdd {
+	font-family: 'Roboto';
+	float: right;
+	font-size: 14px;
+	color: #83a1b0;
+	padding-top: 13px;
+}
+
+.toAdd:before {
+	content: "+";
+	font-size: 18px;
+	color: #074261;
+	background-color: #83a1b0;
+	border-radius: 50%;
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	text-align: center;
+	vertical-align: middle;
+	margin-right: 9px;
+	margin-bottom: 2px;
+	line-height: 17px;
+}
+
+/*----Slider----*/
+
+.bigWrapper {
+	position: relative;
+}
+.sliderWrapper {
+	width: 1920px;
+	height: 440px;
+	position: relative;
+	overflow: hidden;
+	margin-top: 60px;
+	margin-bottom: 64px;
+}
+
+.slide {
+	min-width: 1920px;
+	height: 500px;
+	position: absolute;
+	transition: all ease 0.5s;
+	left:0;
+	font-size: 80px;
+	color: red;
+	text-align: center;
+	padding-top: 100px;
+	overflow: hidden;
+}
+
+.p {
+	left: -3840px;
+}
+
+.g {
+	left: -1920px;
+}
+
+.r {
+	left: 0;
+}
+
+.b {
+	left: 1920px;
+}
+
+.e {
+	left: 3840px;
+}
+
+.o {
+	left: 5760px;
+}
+
+#buttonRight {
+	position: absolute;
+	padding: 0;
+	right: 272px;
+	z-index: 10;
+	top: 50%;
+	height: 80px;
+	left: 1557px;
+	width: 80px;
+	margin-top: -71px;
+	opacity: 0.6;
+	background-color: #031d2a;
+	border: 1px solid #031d2a;
+	border-radius: 40px;
+	background-image: url(../img/arrowRight.png);
+	background-repeat: no-repeat;
+	background-position: 54% center;
+}
+
+#buttonLeft {
+	position: absolute;
+	padding: 0;
+	z-index: 10;
+	left: 275px;
+	top: 44%;
+	margin-top: -40px;
+	height: 80px;
+	width: 80px;
+	opacity: 0.6;
+	background-color: #031d2a;
+	border: 1px solid #031d2a;
+	border-radius: 40px;
+	background-image: url(../img/arrowLeft.png);
+	background-repeat: no-repeat;
+	background-position: 46% center;
+}
+
+#buttonLeft:hover, #buttonRight:hover {
+	opacity: 0.8;
+	transform: scale(1.2, 1.2);
+	transition: all ease 0.5s;
+}
+
+/*-----Events-----*/
+
+.activity {
+	position: absolute;
+	background-repeat: no-repeat;
+	background-position: center center;
+	border-radius: 50%;
+	text-decoration: none;
+	color: #fff;
+	font-weight: bold;
+}
+.item1 {
+	height: 48px;
+	width: 48px;
+	left: 18px;
+	top: 33px;
+	font-size: 10px;
+	background-color: #FF3546;
+	padding-top: 5px;
+	z-index: 2;
+}
+
+.item1 .activityDate {
+	font-family: 'UA-brand-black', sans-serif;
+	font-size: 20px;
+	display: block;
+	margin-bottom: -4px;
+} 
+
+.item2 {
+	background-image: url(../img/opera.png);
+	height: 174px;
+	width: 174px;
+	left: 26px;
+	top: 33px;
+	font-size: 20px;
+	padding-top: 75px;
+}
+
+.slide .item2:before {
+	content: "Опера";
+	display: block;
+	font-size: 13px;
+	font-family: 'Roboto';
+	font-weight: 300 ;
+	height: 24px;
+	width: 85px;
+	background-color: #EE7A30;
+	line-height: 24px;
+	text-align: center;
+	margin: 0 auto;
+	margin-bottom: 5px;
+
+}
+.item3 {
+	height: 108px;
+	width: 108px;
+	left: -19px;
+	top: 257px;
+	font-size: 18px;
+	background-color: #FF3546;
+	padding-top: 18px;
+}
+
+.item3 .activityDate {
+	font-family: 'UA-brand-black', sans-serif;
+	font-size: 37px;
+	display: block;
+	margin-bottom: -4px;
+} 
+
+.item4 {
+	height: 108px;
+	width: 108px;
+	left: 284px;
+	top: 47px;
+	font-size: 18px;
+	background-color: #FF3546;
+	padding-top: 18px;
+}
+
+.item4 .activityDate {
+	font-family: 'UA-brand-black', sans-serif;
+	font-size: 37px;
+	display: block;
+	margin-bottom: -4px;
+} 
+
+.item5 {
+	height: 48px;
+	width: 48px;
+	left: 167px;
+	top: 207px;
+	font-size: 10px;
+	background-color: #FF3546;
+	padding-top: 6px;
+	z-index: 5;
+}
+
+.item5 .activityDate {
+	font-family: 'UA-brand-black', sans-serif;
+	font-size: 17px;
+	display: block;
+	margin-bottom: -2px;
+} 
+
+.item6 {
+	background-image: url(../img/song.png);
+	height: 250px;
+	width: 250px;
+	left: 157px;
+	top: 190px;
+	font-size: 20px;
+	padding-top: 112px;
+}
+
+.slide .item6:before {
+	content: "Концерт";
+	display: block;
+	font-size: 13px;
+	font-family: 'Roboto';
+	font-weight: 300 ;
+	height: 24px;
+	width: 85px;
+	background-color: #EE7A30;
+	line-height: 24px;
+	text-align: center;
+	margin: 0 auto;
+	margin-bottom: 5px;
+}
+
+.item7 {
+	height: 48px;
+	width: 48px;
+	left: 465px;
+	top: 14px;
+	font-size: 10px;
+	background-color: #FF3546;
+	padding-top: 7px;
+	z-index: 5;
+}
+
+.item7 .activityDate {
+	font-family: 'UA-brand-black', sans-serif;
+	font-size: 17px;
+	display: block;
+	margin-bottom: -2px;
+} 
+
+.item8 {
+	background-image: url(../img/dm.png);
+	height: 250px;
+	width: 250px;
+	left: 455px;
+	top: 5px;
+	padding-top: 115px;
+	font-size: 20px;
+}
+
+.slide .item8:before {
+	content: "Концерт";
+	display: block;
+	font-size: 13px;
+	font-family: 'Roboto';
+	font-weight: 300 ;
+	height: 24px;
+	width: 85px;
+	background-color: #EE7A30;
+	line-height: 24px;
+	text-align: center;
+	margin: 0 auto;
+	margin-bottom: 5px;
+}
+
+.item9 {
+	height: 48px;
+	width: 48px;
+	left: 602px;
+	top: 270px;
+	font-size: 10px;
+	background-color: #FF3546;
+	padding-top: 7px;
+	z-index: 5;
+}
+
+.item9 .activityDate {
+	font-family: 'UA-brand-black', sans-serif;
+	font-size: 17px;
+	display: block;
+	margin-bottom: -2px;
+} 
+
+.item10 {
+	height: 108px;
+	width: 108px;
+	left: 442px;
+	top: 282px;
+	font-size: 18px;
+	background-color: #FF3546;
+	padding-top: 18px;
+}
+
+.item10 .activityDate {
+	font-family: 'UA-brand-black', sans-serif;
+	font-size: 37px;
+	display: block;
+	margin-bottom: -4px;
+} 
+
+.item11 {
+	background-image: url(../img/armint.png);
+	height: 174px;
+	width: 174px;
+	left: 608px;
+	top: 267px;
+	font-size: 20px;
+	padding-top: 75px;
+}
+
+.slide .item11:before {
+	content: "Концерт";
+	display: block;
+	font-size: 13px;
+	font-family: 'Roboto';
+	font-weight: 300 ;
+	height: 24px;
+	width: 85px;
+	background-color: #EE7A30;
+	line-height: 24px;
+	text-align: center;
+	margin: 0 auto;
+	margin-bottom: 5px;
+}
+
+.item12 {
+	height: 108px;
+	width: 108px;
+	left: 775px;
+	top: 13px;
+	font-size: 18px;
+	background-color: #FF3546;
+	padding-top: 18px;
+	z-index: 5;
+}
+
+.item12 .activityDate {
+	font-family: 'UA-brand-black', sans-serif;
+	font-size: 37px;
+	display: block;
+	margin-bottom: -4px;
+} 
+
+.item13 {
+	background-image: url(../img/eurovision.png);
+	height: 387px;
+	width: 387px;
+	left: 763px;
+	top: 6px;
+	font-size: 20px;
+	padding-top: 176px;
+	background-position: 49% center;
+}
+
+.slide .item13:before {
+	content: "Конкурс";
+	display: block;
+	font-size: 13px;
+	font-family: 'Roboto';
+	font-weight: 300 ;
+	height: 24px;
+	width: 85px;
+	background-color: #EE7A30;
+	line-height: 24px;
+	text-align: center;
+	margin: 0 auto;
+	margin-bottom: 5px;
+}
+
+.slide .item13:after {
+	content: "";
+	background-image: url(../img/calendar.png);
+	display: block;
+	font-size: 13px;
+	font-family: 'Roboto';
+	font-weight: 300 ;
+	height: 35px;
+	width: 38px;
+	padding-top: 78px;
+	background-position: center center;
+	background-repeat: no-repeat;
+	text-align: center;
+	margin: 0 auto;
+	margin-bottom: 5px;
+}
+
+.item14 {
+	height: 108px;
+	width: 108px;
+	left: 1188px;
+	top: 32px;
+	font-size: 18px;
+	background-color: #FF3546;
+	padding-top: 18px;
+}
+
+.item14 .activityDate {
+	font-family: 'UA-brand-black', sans-serif;
+	font-size: 37px;
+	display: block;
+	margin-bottom: -4px;
+} 
+
+.item15 {
+	height: 48px;
+	width: 48px;
+	left: 1171px;
+	top: 186px;
+	font-size: 10px;
+	background-color: #FF3546;
+	padding-top: 7px;
+	z-index: 5;
+}
+
+.item15 .activityDate {
+	font-family: 'UA-brand-black', sans-serif;
+	font-size: 17px;
+	display: block;
+	margin-bottom: -2px;
+} 
+
+.item16 {
+	background-image: url(../img/theatre.png);
+	height: 249px;
+	width: 249px;
+	left: 1161px;
+	top: 177px;
+	padding-top: 115px;
+	font-size: 20px;
+}
+
+.slide .item16:before {
+	content: "Театр";
+	display: block;
+	font-size: 13px;
+	font-family: 'Roboto';
+	font-weight: 300 ;
+	height: 24px;
+	width: 85px;
+	background-color: #EE7A30;
+	line-height: 24px;
+	text-align: center;
+	margin: 0 auto;
+	margin-bottom: 5px;
+}
+
+.item17 {
+	height: 48px;
+	width: 48px;
+	left: 1355px;
+	top: 29px;
+	font-size: 10px;
+	background-color: #FF3546;
+	padding-top: 7px;
+	z-index: 5;
+}
+
+.item17 .activityDate {
+	font-family: 'UA-brand-black', sans-serif;
+	font-size: 17px;
+	display: block;
+	margin-bottom: -2px;
+} 
+
+.item18 {
+	background-image: url(../img/consert.png);
+	height: 174px;
+	width: 174px;
+	left: 1355px;
+	top: 27px;
+	font-size: 20px;
+	padding-top: 75px;
+}
+
+.slide .item18:before {
+	content: "Опера";
+	display: block;
+	font-size: 13px;
+	font-family: 'Roboto';
+	font-weight: 300 ;
+	height: 24px;
+	width: 85px;
+	background-color: #EE7A30;
+	line-height: 24px;
+	text-align: center;
+	margin: 0 auto;
+	margin-bottom: 5px;
+}
+
+.item19 {
+	height: 108px;
+	width: 108px;
+	left: 1464px;
+	top: 236px;
+	font-size: 18px;
+	background-color: #fff;
+	padding-top: 66px;
+	background-image: url(../img/plust.png);
+	background-position: center 33%;
+}
+
+.item19 .activityDate {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	font-size: 14px;
+	display: block;
+	margin-bottom: -4px;
+	color: #7990e3;
+} 
+
+.item20 {
+	height: 48px;
+	width: 48px;
+	left: 1570px;
+	top: 14px;
+	font-size: 10px;
+	background-color: #FF3546;
+	padding-top: 7px;
+	z-index: 5;
+}
+
+.item20 .activityDate {
+	font-family: 'UA-brand-black', sans-serif;
+	font-size: 17px;
+	display: block;
+	margin-bottom: -2px;
+} 
+
+.item21 {
+	background-image: url(../img/sport.png);
+	height: 174px;
+	width: 174px;
+	left: 1696px;
+	top: 258px;
+	font-size: 20px;
+	padding-top: 75px;
+}
+
+.slide .item21:before {
+	content: "Спорт";
+	display: block;
+	font-size: 13px;
+	font-family: 'Roboto';
+	font-weight: 300 ;
+	height: 24px;
+	width: 85px;
+	background-color: #EE7A30;
+	line-height: 24px;
+	text-align: center;
+	margin: 0 auto;
+	margin-bottom: 5px;
+}
+
+.item22 {
+	height: 48px;
+	width: 48px;
+	left: 1682px;
+	top: 266px;
+	font-size: 10px;
+	background-color: #FF3546;
+	padding-top: 7px;
+	z-index: 5;
+}
+
+.item22 .activityDate {
+	font-family: 'UA-brand-black', sans-serif;
+	font-size: 17px;
+	display: block;
+	margin-bottom: -2px;
+} 
+
+.item23 {
+	background-image: url(../img/theatre2.png);
+	height: 249px;
+	width: 249px;
+	left: 1564px;
+	top: 5px;
+	padding-top: 115px;
+	font-size: 20px;
+}
+
+.slide .item23:before {
+	content: "Театр";
+	display: block;
+	font-size: 13px;
+	font-family: 'Roboto';
+	font-weight: 300 ;
+	height: 24px;
+	width: 85px;
+	background-color: #EE7A30;
+	line-height: 24px;
+	text-align: center;
+	margin: 0 auto;
+	margin-bottom: 5px;
+}
+
+.item24 {
+	height: 108px;
+	width: 108px;
+	left: 1834px;
+	top: 140px;
+	font-size: 18px;
+	background-color: #FF3546;
+	padding-top: 18px;
+}
+
+.item24 .activityDate {
+	font-family: 'UA-brand-black', sans-serif;
+	font-size: 37px;
+	display: block;
+	margin-bottom: -4px;
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+/*-----Footer-----*/
+
+
+.footerWrapper {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: center;
+}
+
+
+.monthSlider {
+	width: 1170px;
+	border-top: 1px solid #457189;
+	position: relative;
+}
+
+.bar {
+	height: 3px;
+	width: 195px;
+	background-color: white;
+	position: absolute;
+	left: 0px;
+	transition: all ease 0.5s;
+	top: -2px;
+}
+
+.monthes {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	width: 1170px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: center;
+	margin-top: 13px;
+}
+
+.monthes li {
+	display: inline-block;
+	width: 195px;
+	text-align: center;
+	color: #457189;
+	font-size: 16px;
+	font-family: 'Roboto';
+	font-weight: 300;
+	transition: all ease 0.5s;
+}
+
+.monthes li:first-child {
+	color: #fff;
+	font-weight: normal;
+}
+
+#date {
+	border: none;
+}
+
+:-webkit-textfield-decoration-container { }
+::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+}
+::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+}
+#dateWrap {
+	position: relative;
+}
+
+
+.datePlaceholder {
+	position: absolute;
+	font-family: 'Roboto';
+	font-weight: 300;
+	font-size: 16px;
+	top: 13px;
+	left: 33px;
+	display: inline-block;
+}
+
+.datePlaceholder .zmdi {
+	position: absolute;	
+	left: -19px;
+	top: 3px;
+}
